@@ -33,3 +33,27 @@ func Test_should_get_correct_array_length(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func Test_should_get_length_and_capcity_of_array1(t *testing.T) {
+	array := [8]int{2, 3, 4, 5, 6, 7}
+	expectLen := 0
+	expectCapacity := 0
+	if expectLen != len(array) {
+		t.Fail()
+	}
+	if expectCapacity != cap(array) {
+		t.Fail()
+	}
+}
+
+func Test_should_get_length_and_capcity_of_array2(t *testing.T) {
+	array := [...]int{2, 3, 4, 5, 6, 7}
+	expectLen := 0
+	expectCapacity := 0
+	if expectLen != len(array) {
+		t.Fail()
+	}
+	if expectCapacity != cap(array) {
+		t.Fail()
+	}
+}
